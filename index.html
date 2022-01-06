@@ -21,6 +21,9 @@
                     <div class="product-info">
                          <h1>{{ product }}</h1>
                          <p>{{ details }}</p>
+                         <p v-if="inStock > 10">In Stack</p>
+                         <p v-else-if="inStock <=10 && inStock > 0">Almost sold out. </p>
+                         <p v-else>Out of Stack</p>
                          <a :href="url">Check out My React App.</a>
                     </div>
                </div>

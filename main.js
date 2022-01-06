@@ -3,8 +3,9 @@ const app = Vue.createApp({
           return {
                product: "Socks",
                details: "This is important for show",
-               image: './assets/images/socks_green.jpg',
-               url: 'http://yeahyea.netlify.app'
+               image: './assets/images/socks_blue.jpg ',
+               url: 'http://yeahyea.netlify.app',
+               inStock: 0
           }
      }
 })
