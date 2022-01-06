@@ -3,14 +3,17 @@ const app = Vue.createApp({
           return {
                product: "Socks",
                image: './assets/images/socks_blue.jpg ',
-               url: 'http://yeahyea.netlify.app',
-               inStock: 0,
-               details: ['50% cotton', '30% wool', '20% polyester'],
-               names: ['Yeahyea Saker', 'Sumaya Hamida','Morium Jamila', 'Tahmina Yeasmin'],
+               inStock: 100,
+               cart: 0,
                variants: [
-                    {id: 2234, color: 'green'},
-                    {id: 2235, color: 'blue'},
+                    {id: 2234, color: 'green', image: './assets/images/socks_green.jpg'},
+                    {id: 2234, color: 'blue', image: './assets/images/socks_blue.jpg'},
                ]
           }
+     },
+     methods: {
+         updateImage(variantImage){
+              this.image = variantImage
+         }
      }
 })
