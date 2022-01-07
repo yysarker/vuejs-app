@@ -3,11 +3,11 @@ const app = Vue.createApp({
           return {
                product: "Socks",
                image: './assets/images/socks_blue.jpg ',
-               inStock: 100,
+               inStock: 0,
                cart: 0,
                variants: [
                     {id: 2234, color: 'green', image: './assets/images/socks_green.jpg'},
-                    {id: 2234, color: 'blue', image: './assets/images/socks_blue.jpg'},
+                    {id: 2234, color: 'darkblue', image: './assets/images/socks_blue.jpg'},
                ]
           }
      },
@@ -16,4 +16,5 @@ const app = Vue.createApp({
               this.image = variantImage
          }
      }
+     
 })

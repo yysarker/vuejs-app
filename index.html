@@ -24,15 +24,16 @@
                          <p v-if="inStock > 10">In Stack</p>
                          <p v-else-if="inStock <=10 && inStock > 0">Almost sold out. </p>
                          <p v-else>Out of Stack</p>
-                         <p>Color available:</p>
-                         <div class="imageGallery" v-for="variant in variants" :key="variant.id"
-                              @click="updateImage(variant.image)">
-                              <img :src="variant.image"  :alt="variant.color">
+                         <p>Color Available:</p>
+                         <div class="color-circle" :style="{ backgroundColor:   variant.color }"
+                              v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">
                          </div>
-                         <button class="button" @click="cart += 1">Add to Cart</button>
                     </div>
+                    <button class="button" :class="{ disabledButton: !inStock }" :disabled="!inStock" @click="cart += 1">Add to
+                         Cart</button>
                </div>
           </div>
+     </div>
      </div>
 
      <!-- Import Js -->
