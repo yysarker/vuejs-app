@@ -23,14 +23,17 @@
                          <h1>{{ title }}</h1>
                          <p v-if="inStock > 10">In Stack</p>
                          <p v-else-if="inStock <=10 && inStock > 0">Almost sold out. </p>
+                         <!-- code solution -->
                          <p v-if="onSale">{{ saleMessage }}</p>
+                         <!-- End code solution -->
                          <p v-else>Out of Stack</p>
                          <p>Color Available:</p>
                          <div class="color-circle" :style="{ backgroundColor:   variant.color }"
                               v-for="(variant, index) in variants" :key="variant.id" @click="updateVariant(index)">
                          </div>
                     </div>
-                    <button class="button" :class="{ 'out-of-stock-img': !inStock }" :disabled="!inStock" @click="cart += 1">Add to
+                    <button class="button" :class="{ 'out-of-stock-img': !inStock }" :disabled="!inStock"
+                         @click="cart += 1">Add to
                          Cart</button>
                </div>
           </div>
