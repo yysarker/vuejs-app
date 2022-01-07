@@ -29,7 +29,7 @@
                               v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">
                          </div>
                     </div>
-                    <button class="button" :class="{ disabledButton: !inStock }" :disabled="!inStock" @click="cart += 1">Add to
+                    <button class="button" :class="{ 'out-of-stock-img': !inStock }" :disabled="!inStock" @click="cart += 1">Add to
                          Cart</button>
                </div>
           </div>
